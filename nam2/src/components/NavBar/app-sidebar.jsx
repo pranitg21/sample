@@ -26,6 +26,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { NavSettings } from "@/components/NavBar/nav-settings"
+import { Button } from "../ui/button"
 
 // This is sample data.
 const data = {
@@ -162,6 +163,7 @@ export function AppSidebar({ ...props }) {
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
+        <Button variant="destructive" size="lg">sam</Button>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />

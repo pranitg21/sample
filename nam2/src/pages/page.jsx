@@ -1,4 +1,3 @@
-import { Component } from "@/components/ChartSummery"
 import { AppSidebar } from "@/components/NavBar/app-sidebar"
 import { ModeToggle } from "@/components/NavBar/mode-toggle"
 import {
@@ -15,10 +14,13 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import TicketManagement from "./ticket-management"
+import CapacityPlanning from "./cpacity-panning"
 
 export default function Page() {
   return (
     <SidebarProvider>
+      
       <AppSidebar />
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
@@ -27,6 +29,7 @@ export default function Page() {
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
               <BreadcrumbList>
+
                 <BreadcrumbItem className="hidden md:block">
                   <BreadcrumbLink href="#">
                     Building Your Application
@@ -42,9 +45,16 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+        <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" >
+        <TicketManagement/>
+        
+        </div>
+        <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" >
+        <CapacityPlanning/>
+        </div>
+
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="aspect-video rounded-xl bg-muted/50" >
-            <Component />
             </div>
             <div className="aspect-video rounded-xl bg-muted/50" />
             <div className="aspect-video rounded-xl bg-muted/50" />

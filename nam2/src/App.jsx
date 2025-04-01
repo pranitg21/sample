@@ -1,7 +1,5 @@
 
 import "./App.css";
-import { CardWithForm } from "@/components/CardwithForm";
-import { Button } from "@/components/ui/button";
 import Page from "./pages/page";
 import { ThemeProvider } from "@/components/Theme/theme-provider"
 
